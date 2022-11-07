@@ -1,4 +1,4 @@
-import config from '../confi.json';
+import config from '../config.json';
 import styled from 'styled-components';
 import { CSSReset } from '../src/components/CSSReset';
 import Menu from '../src/components/Menu';
@@ -37,7 +37,7 @@ const StyledHeader = styled.div`
   }
 
   .user-info {
-    margin-top: 50px;
+    margin-top: 56px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -48,7 +48,7 @@ const StyledHeader = styled.div`
 function Header() {
   return (
     <StyledHeader>
-      {/* {<img src="banner" alt="" />} */}
+      <img src="" />
 
       <section className="user-info">
         <img src={`https://github.com/${config.github}.png`} />
@@ -69,8 +69,6 @@ function TimeLine(props) {
     <StyledTimeline>
       {playListsNames.map(playListsNames => {
         const videos = props.playLists[playListsNames];
-        console.log(playListsNames);
-        console.log(videos);
         return (
           <section>
             <h2>{playListsNames}</h2>
