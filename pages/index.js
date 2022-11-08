@@ -49,12 +49,16 @@ const StyledHeader = styled.div`
     width: 100%;
     height: 236px;
   }
+
+  .linkedin {
+    color: #0077b5;
+    font-size: 14px;
+  }
 `;
 
 function Header() {
   return (
     <StyledHeader>
-      
       <img className="banner" src={config.banner} />
 
       <section className="user-info">
@@ -65,6 +69,19 @@ function Header() {
         <div>
           <h2>{config.name}</h2>
           <p>{config.job}</p>
+          <a
+            href="https://www.linkedin.com/in/cristianosantosbarbosa/"
+            className="linkedin"
+          >
+            {config.linkedin}
+          </a>
+          <a className="linkedin">{config.separador}</a>
+          <a
+            href="https://github.com/cristianosbarbosadev "
+            className="linkedin"
+          >
+            {config.github}
+          </a>
         </div>
       </section>
     </StyledHeader>
