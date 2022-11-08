@@ -6,9 +6,9 @@ export const StyledTimeline = styled.div`
   padding: 16px;
   overflow: hidden;
   h2 {
+    text-transform: uppercase;
     font-size: 16px;
     margin-bottom: 16px;
-    text-transform: capitalize;
   }
   img {
     aspect-ratio: 16/9;
@@ -35,6 +35,8 @@ export const StyledTimeline = styled.div`
       a {
         scroll-snap-align: start;
         span {
+          font-size: 12px;
+          font-weight: bold;
           padding-top: 8px;
           display: block;
           padding-right: 24px;

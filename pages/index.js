@@ -30,28 +30,38 @@ export default HomePage;
 // }
 
 const StyledHeader = styled.div`
-  img {
+  .user-thumb {
     width: 80px;
     height: 80px;
     border-radius: 50%;
   }
 
   .user-info {
-    margin-top: 56px;
     display: flex;
     align-items: center;
     width: 100%;
     padding: 16px 32px;
     gap: 16px;
   }
+
+  .banner {
+    object-fit: cover;
+    width: 100%;
+    height: 236px;
+  }
 `;
+
 function Header() {
   return (
     <StyledHeader>
-      <img src="" />
+      
+      <img className="banner" src={config.banner} />
 
       <section className="user-info">
-        <img src={`https://github.com/${config.github}.png`} />
+        <img
+          className="user-thumb"
+          src={`https://github.com/${config.github}.png`}
+        />
         <div>
           <h2>{config.name}</h2>
           <p>{config.job}</p>
